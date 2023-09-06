@@ -54,7 +54,7 @@ public List<Services> getAllServices(){
     }
     servicesRepository.delete(services);
 }
-    //end point >> Reem
+    //end point 
     public void assignServicesToDesigner( Integer servicesId,Integer designerId){
         Services services=servicesRepository.findServicesById(servicesId);
         Designer designer=designerRepository.findDesignerById(designerId);
