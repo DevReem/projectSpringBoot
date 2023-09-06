@@ -31,7 +31,7 @@ public class OrderService {
     }
 
 //endpoint add order calculate the total price ,status by default"notStarted"
-//end point>>reem
+
 public void addOrder1(Integer customerId,Order order,Integer servicesId){
     Customer customer=customerRepository.findCustomerById(customerId);
     Services services=servicesRepository.findServicesById(servicesId);
@@ -62,7 +62,7 @@ public void addOrder1(Integer customerId,Order order,Integer servicesId){
         orderRepository.save(oldorder);
     }
     //endpoint check order status if in progress or done
-    //regayah
+    
     public void deleteOrder(Integer customerId,Integer orderId){
         Order order=orderRepository.findOrderById(orderId);
         Customer customer=customerRepository.findCustomerById(customerId);
@@ -77,7 +77,7 @@ public void addOrder1(Integer customerId,Order order,Integer servicesId){
     }
 
     //  Create endpoint that change order status(only designer can change it)
-    //end point >reem
+    
 
     public void changeStatus(Integer designerId,Integer orderId,String status){
         Designer designer=designerRepository.findDesignerById(designerId);
@@ -93,7 +93,7 @@ public void addOrder1(Integer customerId,Order order,Integer servicesId){
     }
 
     // endpoint  that get order by Status
-    //regayah
+    
 
     public  Order getOrderByStatus(String status){
         Order order=orderRepository.findOrderByStatus(status);
@@ -104,7 +104,6 @@ public void addOrder1(Integer customerId,Order order,Integer servicesId){
     }
 
 //Get all customer orders
-//end point>>reem
 public List<Order> getAllCustomer() {
     List<Order> orders = orderRepository.findAll();
     return orders;
