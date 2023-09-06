@@ -24,7 +24,7 @@ public class RateOrderService {
     public List<RateOrder> getAll(){
         return rateOrderRepository.findAll();
     }
-//Reem
+
 public void addRateOrder (RateDTO dto,Integer customerId ){
     Order order=orderRepository.findOrderById(dto.getOrderId());
     Designer d=designerRepository.findDesignerById(order.getDesigner().getId());
